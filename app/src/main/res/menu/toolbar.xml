@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Main1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/addShop"
+        android:title="添加店铺"
+
+        android:typeface="serif">
+    </item>
+    <item
+        android:id="@+id/shop"
+        android:title="我的店铺"
+
+        android:typeface="serif">
+    </item>
+    <item
+        android:id="@+id/list"
+        android:title="我的订单"
+
+        android:typeface="serif">
+    </item>
+    <item
+        android:id="@+id/out"
+        android:title="退出"
+
+        android:typeface="serif">
+    </item>
+    <item
+        android:id="@+id/delete"
+        android:title="注销"
+
+        android:typeface="serif">
+    </item>
+</menu>
