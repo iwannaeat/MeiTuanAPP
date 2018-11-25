@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/ha">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp">
@@ -18,6 +19,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:hint="请输入商品价格"
+        android:inputType="numberDecimal"
         android:id="@+id/et_price"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,8 +27,8 @@
 
     </LinearLayout>
     <Button
-        android:layout_width="130dp"
-        android:layout_height="40dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:text="确定"
         android:id="@+id/btn_createGoods"
         android:layout_gravity="center_horizontal"/>
@@ -36,8 +38,8 @@
 
     </LinearLayout>
     <Button
-        android:layout_width="130dp"
-        android:layout_height="40dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:text="取消"
         android:id="@+id/btn_out"
         android:layout_gravity="center_horizontal"/>

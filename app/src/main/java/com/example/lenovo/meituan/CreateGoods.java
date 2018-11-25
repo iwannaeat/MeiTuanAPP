@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -58,4 +60,15 @@ public class CreateGoods extends AppCompatActivity {
             }
         });
     }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = getIntent();
+            Intent intent2 = new Intent(CreateGoods.this, MyShop.class);
+            intent2.putExtra("userName", intent.getStringExtra("userName"));
+            startActivity(intent2);
+            return true;
+        }
+        return false;
+    }
+
 }

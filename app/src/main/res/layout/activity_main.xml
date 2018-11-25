@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/piii">
+    android:background="@drawable/piii"
+    android:id="@+id/linearLayout">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"

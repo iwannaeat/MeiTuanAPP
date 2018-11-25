@@ -25,6 +25,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "goodsName text, "
             + "shopName text,"
             + "userName text,"
+            + "ownerName text,"
             + "price real)";
 
     private Context mContext;

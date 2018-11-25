@@ -21,7 +21,6 @@
         <activity android:name=".CreateShop"></activity>
         <activity android:name=".MyShop"></activity>
         <activity android:name=".ShowGoods"></activity>
-        <activity android:name=".Information"></activity>
         <activity android:name=".ShowList"></activity>
         <activity android:name=".CreateGoods"></activity>
         <activity android:name=".MyGoods"></activity>

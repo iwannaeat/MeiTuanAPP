@@ -77,6 +77,7 @@ public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.ViewHolder> 
                     values.put("shopName",shopName);
                     values.put("userName",userName);
                     values.put("price",price);
+                    values.put("ownerName",goods.getUserName());
                     db.insert("List", null, values);
                     values.clear();
                     Toast.makeText(goodsView.getContext(), "购买完成", Toast.LENGTH_SHORT).show();

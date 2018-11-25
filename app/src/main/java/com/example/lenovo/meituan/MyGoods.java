@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,6 +51,17 @@ public class MyGoods extends AppCompatActivity {
         UsersGoodsAdapter usersGoodsAdapter = new UsersGoodsAdapter(UsersGoodsList,shopName,userName);
         recyclerView.setAdapter(usersGoodsAdapter);
 
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = getIntent();
+            String userName = intent.getStringExtra("userName");
+            Intent intent2 = new Intent(MyGoods.this, MyShop.class);
+            intent2.putExtra("userName", userName);
+            startActivity(intent2);
+            return true;
+        }
+        return false;
     }
     private void initData()
     {

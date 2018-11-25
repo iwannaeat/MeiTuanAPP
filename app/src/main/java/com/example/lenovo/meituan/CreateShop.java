@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -73,4 +74,15 @@ public class CreateShop extends AppCompatActivity {
             }
         });
     }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent1 = getIntent();
+            Intent intent = new Intent(CreateShop.this, Main1.class);
+            intent.putExtra("userName", intent1.getStringExtra("userName"));
+            startActivity(intent);
+            return true;
+        }
+        return false;
+    }
+
 }

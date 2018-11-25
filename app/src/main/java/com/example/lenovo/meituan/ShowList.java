@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -51,6 +52,17 @@ public class ShowList extends AppCompatActivity {
         BuyAdapter buyAdapter = new BuyAdapter(BuyList);
         recyclerView.setAdapter(buyAdapter);
 
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent3 = getIntent();
+            String userName = intent3.getStringExtra("userName");
+            Intent intent = new Intent(ShowList.this, Main1.class);
+            intent.putExtra("userName", userName);
+            startActivity(intent);
+            return true;
+        }
+        return false;
     }
     private void initData()
     {

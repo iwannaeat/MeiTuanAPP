@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
@@ -60,4 +63,19 @@ public class ChangeGoods extends AppCompatActivity {
             }
         });
     }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent2 = getIntent();
+            final String userName = intent2.getStringExtra("userName");
+            final String goodsName = intent2.getStringExtra("goodsName");
+            final String shopName = intent2.getStringExtra("shopName");
+            Intent intent = new Intent(ChangeGoods.this, MyGoods.class);
+            intent.putExtra("userName", userName);
+            intent.putExtra("shopName", shopName);
+            startActivity(intent);
+            return true;
+        }
+        return false;
+    }
+
 }
